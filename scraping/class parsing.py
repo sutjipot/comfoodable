@@ -59,5 +59,5 @@ columns = ["recipe_url"] + attribute
 temp = temp[columns]
 
 dairyfree_df = temp
-dairyfree_df.to_csv(r"C:\Users\indir\OneDrive\Documents\Data\mains full.csv", index=False)
+dairyfree_df.to_csv(r"C:\Users\indir\OneDrive\Documents\Data\mains full real.csv", index=False)
 
