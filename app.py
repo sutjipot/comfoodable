@@ -1,5 +1,5 @@
 import streamlit as st
 
-header = st.beta_container()
-with header:
-  st.title("Comfoodable")
+with st.beta_container():
+    st.write("Comfoodable")
+
