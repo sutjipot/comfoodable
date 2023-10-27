@@ -1,5 +1,7 @@
 import streamlit as st
 
-with st.beta_container():
-    st.write("Comfoodable")
+def main():
+    st.markdown("# *Comfoodable*")
 
+if __name__ == "__main__":
+    main()
