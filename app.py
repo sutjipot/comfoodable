@@ -11,7 +11,7 @@ def main():
     st.text("")
 
 
-    col1, buff, col2 = st.beta_columns([1,1,6])
+    col1, buff, col2 = st.beta_columns((1,1,6))
 
     with col1:
         select = st.selectbox("Choose your dietary preference!", ["No restriction", "Vegan", "vegetarian" ,"Dairy-free", "Gluten-free"])
