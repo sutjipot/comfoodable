@@ -12,10 +12,10 @@ def main():
 
     col1, col2 = st.columns([1.8,4])
     with col1:
-        select = st.selectbox("Choose your dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"])
+        select = st.selectbox("Choose dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"])
     with col2:
         ingredients = st.text_input(
-            "Enter ingredients you would like to cook with (seperate ingredients with a comma)",
+            "Enter ingredients you have(seperate ingredients with a comma)",
             "chinese five spices, sirloin steak, feta cheese, bacon",)
     st.text("")
     st.button("Search")
