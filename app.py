@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 def main():
-    image = Image.open("data/food.jpg").resize((680, 150))
+    image = Image.open("data/food.jpg")
     st.image(image)
     st.markdown("# *Comfoodable*")
 
