@@ -74,8 +74,8 @@ def ingredient_parser(ingredient):
 
 
 #recipe_df changes for every file that we want to parse the ingredients of
-recipe_df = pd.read_csv(r"C:\Users\indir\OneDrive\Documents\Data\vegan full real.csv")
-recipe_df["parsed_ingredients"] = recipe_df["ingredients"].apply(lambda x: ingredient_parser(x))
-df = recipe_df[["name", "time", "difficulty", "ingredients", "parsed_ingredients", "recipe_url"]]
-df.to_csv(r"C:\Users\indir\OneDrive\Documents\Data\vegan parsed.csv", index=False)
+#recipe_df = pd.read_csv(r"C:\Users\indir\OneDrive\Documents\Data\vegan full real.csv")
+#recipe_df["parsed_ingredients"] = recipe_df["ingredients"].apply(lambda x: ingredient_parser(x))
+#df = recipe_df[["name", "time", "difficulty", "ingredients", "parsed_ingredients", "recipe_url"]]
+#df.to_csv(r"C:\Users\indir\OneDrive\Documents\Data\vegan parsed.csv", index=False)
     
