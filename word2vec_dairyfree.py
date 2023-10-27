@@ -1,6 +1,4 @@
 import os
-import sys
-import logging
 import unidecode
 import ast
 import numpy as np
@@ -147,10 +145,10 @@ def get_df_recs(ingredients, n=10, mean=False):
     return recommend(n, score)
 
 
-if __name__ == "__main__":
-    input = "bread flour, instant yeast, sugar, egg, pumpkin"
-    rec = get_df_recs(input)
-    print(rec)
+#example run
+#input = "bread flour, instant yeast, sugar, egg, pumpkin"
+#rec = get_df_recs(input)
+#print(rec)
 
 
     
