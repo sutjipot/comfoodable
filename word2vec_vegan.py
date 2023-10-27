@@ -1,6 +1,3 @@
-import os
-import sys
-import logging
 import unidecode
 import ast
 import numpy as np
@@ -32,7 +29,7 @@ def real_ingparse(ingredient):
     return unidecode.unidecode(ingreds)
 
 def recommend(n, score):
-    recipes = pd.read_csv(r"C:\Users\indir\OneDrive\Documents\Data\vegan parsed.csv")
+    recipes = pd.read_csv("data/vegan parsed.csv")
     top = sorted(range(len(score)), key= lambda x: score[x], reverse= True)[:n]
 
     recommended = pd.DataFrame(columns=["recipe", "ingredients", "url", "time", "difficulty", "score"])
@@ -111,12 +108,12 @@ class TFIDFvectorizer(object):
         return self.word_avg_list(docs)
 
 def get_vegan_recs(ingredients, n=10, mean=False):
-    model = Word2Vec.load(r"C:\Users\indir\OneDrive\Documents\Data\model_cbow.bin")
+    model = Word2Vec.load("model_cbow.bin")
     model.init_sims(replace=True)
     if model:
         print("success")
     
-    data = pd.read_csv(r"C:\Users\indir\OneDrive\Documents\Data\vegan parsed.csv")
+    data = pd.read_csv("data/vegan parsed.csv")
     data["parsed_ingredients"] = data.ingredients.apply(ingredient_parser)
     corpus = get_sort_corpus(data)
 
@@ -147,10 +144,10 @@ def get_vegan_recs(ingredients, n=10, mean=False):
     return recommend(n, score)
 
 
-if __name__ == "__main__":
-    input = "garlic, rice noodle, tofu"
-    rec = get_vegan_recs(input)
-    print(rec)
+#example run
+#input = "garlic, rice noodle, tofu"
+#rec = get_vegan_recs(input)
+#print(rec)
 
 
     
