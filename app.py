@@ -10,7 +10,7 @@ def main():
     st.markdown("I have a few ingredients at home.. I barely have time, but I have to cook! Let's use the tool below! :relieved:")
     st.text("")
 
-    col1, col2, col3 = st.columns([1,4,1])
+    col1, col2 = st.columns([1,5])
     with col1:
         select = st.selectbox("Choose your dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"])
     with col2:
@@ -18,8 +18,7 @@ def main():
             "Enter ingredients you would like to cook with (seperate ingredients with a comma)",
             "chinese five spices, sirloin steak, feta cheese, bacon",
         )
-    with col3:
-        st.button("Search")
+    st.button("Search")
 
 if __name__ == "__main__":
     main()
