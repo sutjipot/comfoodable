@@ -10,6 +10,7 @@ entrypoints==0.3
 extruct==0.10.0
 Flask==1.1.2
 Flask-Jsonpify==1.5.0
+fontTools==4.40.0
 html-text==0.5.2
 html5lib==1.1
 idna==2.10
@@ -52,12 +53,15 @@ selenium==3.141.0
 Send2Trash==1.5.0
 sklearn==0.0
 soupsieve==2.0.1
+streamlit==1.10.0
+streamlit-chat==0.1.0
 terminado==0.9.1
 testpath==0.4.4
 threadpoolctl==2.1.0
 tldextract==2.2.2
 tornado==6.0.4
 tqdm==4.50.2
+typing_extensions==4.6.3
 Unidecode==1.1.1
 urllib3==1.25.10
 w3lib==1.22.0
@@ -65,4 +69,6 @@ webencodings==0.5.1
 Werkzeug==1.0.1
 widgetsnbextension==3.5.1
 gunicorn==20.0.4
-streamlit-chat==0.1.0
+
+
+
