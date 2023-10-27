@@ -41,10 +41,7 @@ def main():
 
     if st.session_state.execute:
         if select == "No restriction":
-            col1, col2, col3, col4, col5 = st.columns([1,1,3,1,1])
-            recipe = get_mains_recs(ingredients, mean=True)
-            with col1:
-                st.write(recipe)
+            pass
         
         elif select == "Vegan":
             pass
