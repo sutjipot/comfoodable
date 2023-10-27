@@ -16,8 +16,8 @@ def main():
     with col2:
         ingredients = st.text_input(
             "Enter ingredients you would like to cook with (seperate ingredients with a comma)",
-            "chinese five spices, sirloin steak, feta cheese, bacon",
-        )
+            "chinese five spices, sirloin steak, feta cheese, bacon",)
+    st.text("")
     st.button("Search")
 
 if __name__ == "__main__":
