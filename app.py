@@ -8,7 +8,7 @@ def main():
     image = Image.open("data/food.jpg")
     st.image(image)
     st.markdown("## What should I make today? :yum:")
-    message("I have a few ingredients at home.. I barely have time, but I have to cook!", is_user = True)
+    st.markdown("I have a few ingredients at home.. I barely have time, but I have to cook! Let's use the tool below! :relieved:")
     
 
 if __name__ == "__main__":
