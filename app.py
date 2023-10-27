@@ -12,13 +12,14 @@ def main():
 
     col1, col2 = st.columns([1.8,4])
     with col1:
-        select = st.selectbox("Choose dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"])
+        select = st.selectbox("Choose dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"], placeholder="Select")
+        st.write(select)
     with col2:
         ingredients = st.text_input(
-            "Enter ingredients you have(seperate ingredients with a comma)",
+            "Enter ingredients you have (seperate ingredients with a comma)",
             "chinese five spices, sirloin steak, feta cheese, bacon",)
     st.text("")
-    st.button("Search")
+    st.button("Search recipes that match")
 
 if __name__ == "__main__":
     main()
