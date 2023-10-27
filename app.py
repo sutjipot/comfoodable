@@ -13,7 +13,7 @@ def clickable(name, link):
 
 def main():
     st.markdown("# *:pizza::ramen: Comfoodable :bread::fork_and_knife:*")
-    st.markdown("A content-based filtering ML for recipe recommendations by Indira Sutjipto and Ilona Nikkar")
+    st.markdown("Finding recipes made comfortable by Indira Sutjipto and Ilona Nikkar")
     image = Image.open("data/food.jpg")
     st.image(image)
     st.markdown("## What should I make today? :yum:")
