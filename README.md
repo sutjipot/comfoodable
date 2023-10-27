@@ -1,4 +1,4 @@
-# [Comfoodable]: Recipe Reccommendation System (https://comfoodable.streamlit.app/)
+# [Comfoodable](https://comfoodable.streamlit.app/): Recipe Reccommendation System 
 Finding recipes made comfortable
 
 ## Overview
