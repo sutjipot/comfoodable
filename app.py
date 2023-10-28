@@ -30,7 +30,7 @@ def main():
     
     col1, col2 = st.beta_columns([1.8,4])
     with col1:
-        select = st.selectbox("Choose dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"], placeholder="Select")
+        select = st.selectbox("Choose dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"])
         st.session_state.select = select
     with col2:
         ingredients = st.text_input(
