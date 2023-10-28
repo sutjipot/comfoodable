@@ -28,7 +28,7 @@ def main():
         st.session_state.clean = ""
     
     
-    col1, col2 = st.columns([1.8,4])
+    col1, col2 = st.beta_columns([1.8,4])
     with col1:
         select = st.selectbox("Choose dietary preference!", ["No restriction", "Vegan", "Vegetarian" ,"Dairy-free", "Gluten-free"], placeholder="Select")
         st.session_state.select = select
