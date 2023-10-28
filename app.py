@@ -3,9 +3,9 @@ from PIL import Image
 from word2vec_dairyfree import get_df_recs
 import unidecode
 from word2vec_glutenfree import get_gf_recs
-#from word2vec_mains import get_mains_recs
-#from word2vec_vegan import get_vegan_recs
-#from word2vec_vegetarian import get_vegetarian_recs
+from word2vec_mains import get_mains_recs
+from word2vec_vegan import get_vegan_recs
+from word2vec_vegetarian import get_vegetarian_recs
 
 
 def clickable(name, link):
@@ -26,7 +26,7 @@ def main():
         st.session_state.computed = False
         st.session_state.recipes = ""
         st.session_state.clean = ""
-    
+        st.session_state.choice = ""
     
     col1, col2 = st.beta_columns([1.8,4])
     with col1:
@@ -40,9 +40,12 @@ def main():
     st.text("")
     st.session_state.execute = st.button("Search recipes that match!")
 
+    cola, colb, colc, cold, cole = [1,1,2,1,1]
     if st.session_state.execute:
         if select == "No restriction":
-            pass
+            recipe = get_mains_recs(ingredients, mean=True)
+            
+            
         
         elif select == "Vegan":
             pass
