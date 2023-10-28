@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 from word2vec_dairyfree import get_df_recs
 import unidecode
-#from word2vec_glutenfree import get_gf_recs
+from word2vec_glutenfree import get_gf_recs
 #from word2vec_mains import get_mains_recs
 #from word2vec_vegan import get_vegan_recs
 #from word2vec_vegetarian import get_vegetarian_recs
