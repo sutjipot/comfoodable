@@ -52,7 +52,7 @@ def main():
         if select == "No restriction":
             recipe = get_mains_recs(ingredients, mean=True)
             with cola:
-                st.write(recipe[0])
+                st.write(recipe["name"])
             
         
         elif select == "Vegan":
