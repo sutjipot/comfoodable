@@ -8,6 +8,12 @@ from word2vec_vegan import get_vegan_recs
 from word2vec_vegetarian import get_vegetarian_recs
 
 
+try:
+    nltk.data.find("corpora/wordnet")
+except LookupError:
+    nltk.download("wordnet")
+
+
 def clickable(name, link):
     return f'<a target="_blank" href="{link}">{name}</a>'
 
