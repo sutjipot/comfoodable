@@ -44,7 +44,8 @@ def main():
     if st.session_state.execute:
         if select == "No restriction":
             recipe = get_mains_recs(ingredients, mean=True)
-            
+            with cola:
+                st.write(recipe[0])
             
         
         elif select == "Vegan":
