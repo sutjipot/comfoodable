@@ -51,8 +51,14 @@ def main():
     if st.session_state.execute:
         if select == "No restriction":
             recipe = get_mains_recs(ingredients, mean=True)
-            with cola:
-                st.write(recipe["name"])
+            st.session_state.clean = recipe.copy()
+            recipe["url"] = recipe.apply(lambda row: clickable(row["recipe"], row["url"]), axis=1)
+            recipe_display = recipe[["recipe", "time", "difficulty", "ingredients","url"]]
+            st.session_state.recipe_display = recipe_display.to_html(escape=False)
+            st.session_state.recipes = recipe.recipe.values.tolist()
+            st.session_state.computed = True
+            st.session_state.execute = False
+            st.session_state.select = ""
             
         
         elif select == "Vegan":
