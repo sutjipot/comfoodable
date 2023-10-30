@@ -41,11 +41,12 @@ def main():
         st.session_state.select = select
     with col2:
         ingredients = st.text_input(
-            "Enter ingredients you have (seperate ingredients with a comma)",
-            "chinese five spices, sirloin steak, feta cheese, bacon",)
+            "Enter as many ingredients as you have (seperate ingredients with a comma)",
+            "chinese five spices, sirloin steak, feta cheese, bacon", )
         st.session_state.ingredients = ingredients
     st.text("")
     st.session_state.execute = st.button("Search recipes that match!")
+    st.caption("The lower the list goes, the less similar it is to your input recipes.")
 
     if st.session_state.execute:
         if select == "No restriction":
