@@ -56,6 +56,7 @@ def main():
             st.session_state.recipe_display = recipe_display.to_html(escape=False)
             st.session_state.recipes = recipe.recipe.values.tolist()
             st.session_state.computed = True
+            st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             st.session_state.execute = False
             st.session_state.select = ""
             
@@ -67,6 +68,7 @@ def main():
             st.session_state.recipe_display = recipe_display.to_html(escape=False)
             st.session_state.recipes = recipe.recipe.values.tolist()
             st.session_state.computed = True
+            st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             st.session_state.execute = False
             st.session_state.select = ""
             
@@ -78,6 +80,7 @@ def main():
             st.session_state.recipe_display = recipe_display.to_html(escape=False)
             st.session_state.recipes = recipe.recipe.values.tolist()
             st.session_state.computed = True
+            st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             st.session_state.execute = False
             st.session_state.select = ""
             
@@ -89,8 +92,10 @@ def main():
             st.session_state.recipe_display = recipe_display.to_html(escape=False)
             st.session_state.recipes = recipe.recipe.values.tolist()
             st.session_state.computed = True
+            st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             st.session_state.execute = False
             st.session_state.select = ""
+            
             
         else:
             recipe = get_df_recs(ingredients, mean=True)
@@ -100,11 +105,11 @@ def main():
             st.session_state.recipe_display = recipe_display.to_html(escape=False)
             st.session_state.recipes = recipe.recipe.values.tolist()
             st.session_state.computed = True
+            st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             st.session_state.execute = False
             st.session_state.select = ""
             
-    if st.session_state.compute:
-        st.write(st.session_state.recipe_display, unsafe_allow_html=True)
+
 
 
 
