@@ -30,7 +30,7 @@ def main():
 
     if "execute" not in st.session_state:
         st.session_state.execute = False
-        st.session_state.computed = False
+        st.session_state.compute = False
         st.session_state.recipes = ""
         st.session_state.clean = ""
         st.session_state.choice = ""
@@ -47,7 +47,6 @@ def main():
     st.text("")
     st.session_state.execute = st.button("Search recipes that match!")
 
-    cola, colb, colc, cold, cole = [1,1,2,1,1]
     if st.session_state.execute:
         if select == "No restriction":
             recipe = get_mains_recs(ingredients, mean=True)
@@ -61,15 +60,52 @@ def main():
             st.session_state.select = ""
             st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             
-        
         elif select == "Vegan":
-            pass
+            recipe = get_vegan_recs(ingredients, mean=True)
+            st.session_state.clean = recipe.copy()
+            recipe["url"] = recipe.apply(lambda row: clickable(row["recipe"], row["url"]), axis=1)
+            recipe_display = recipe[["recipe", "time", "difficulty", "ingredients","url"]]
+            st.session_state.recipe_display = recipe_display.to_html(escape=False)
+            st.session_state.recipes = recipe.recipe.values.tolist()
+            st.session_state.computed = True
+            st.session_state.execute = False
+            st.session_state.select = ""
+            
         elif select == "Vegetarian":
-            pass
+            recipe = get_vegetarian_recs(ingredients, mean=True)
+            st.session_state.clean = recipe.copy()
+            recipe["url"] = recipe.apply(lambda row: clickable(row["recipe"], row["url"]), axis=1)
+            recipe_display = recipe[["recipe", "time", "difficulty", "ingredients","url"]]
+            st.session_state.recipe_display = recipe_display.to_html(escape=False)
+            st.session_state.recipes = recipe.recipe.values.tolist()
+            st.session_state.computed = True
+            st.session_state.execute = False
+            st.session_state.select = ""
+            
         elif select == "Gluten-free":
-            pass
+            recipe = get_gf_recs(ingredients, mean=True)
+            st.session_state.clean = recipe.copy()
+            recipe["url"] = recipe.apply(lambda row: clickable(row["recipe"], row["url"]), axis=1)
+            recipe_display = recipe[["recipe", "time", "difficulty", "ingredients","url"]]
+            st.session_state.recipe_display = recipe_display.to_html(escape=False)
+            st.session_state.recipes = recipe.recipe.values.tolist()
+            st.session_state.computed = True
+            st.session_state.execute = False
+            st.session_state.select = ""
+            
         else:
-            pass
+            recipe = get_df_recs(ingredients, mean=True)
+            st.session_state.clean = recipe.copy()
+            recipe["url"] = recipe.apply(lambda row: clickable(row["recipe"], row["url"]), axis=1)
+            recipe_display = recipe[["recipe", "time", "difficulty", "ingredients","url"]]
+            st.session_state.recipe_display = recipe_display.to_html(escape=False)
+            st.session_state.recipes = recipe.recipe.values.tolist()
+            st.session_state.computed = True
+            st.session_state.execute = False
+            st.session_state.select = ""
+            
+    if st.session_state.compute:
+        st.write(st.session_state.recipe_display, unsafe_allow_html=True)
 
 
 
