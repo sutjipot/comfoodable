@@ -58,7 +58,6 @@ def main():
             st.session_state.computed = True
             st.session_state.execute = False
             st.session_state.select = ""
-            st.write(st.session_state.recipe_display, unsafe_allow_html=True)
             
         elif select == "Vegan":
             recipe = get_vegan_recs(ingredients, mean=True)
