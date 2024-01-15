@@ -30,7 +30,7 @@ Continuous Bag of Words (CBOW) of Word2Vec neural network was used to create wor
 To construct the recipe recommendation system, each ingredient list was condensed into a single embedding, to allow effective similarity calculation. TF-IDF aggregation of embeddings werre used to provide distinction between recipes by emphasizing unique ingredients.
 
 ## Deliverable
-Streamlit was used to make a user-interactive app.
+Streamlit was used to make a user-interactive [app](https://comfoodable.streamlit.app/)
 
 
 
