@@ -41,8 +41,8 @@ def main():
         st.session_state.select = select
     with col2:
         ingredients = st.text_input(
-            "Enter as many ingredients as you have (seperate ingredients with a comma)",
-            "chinese five spices, sirloin steak, feta cheese, bacon", )
+            "Enter as many ingredients as you have (seperate ingredients with a comma, then enter)",
+            "feta cheese, bacon, heavy cream, parsley", )
         st.session_state.ingredients = ingredients
     st.text("")
     st.session_state.execute = st.button("Search recipes that match!")
