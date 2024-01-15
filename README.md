@@ -31,6 +31,7 @@ To construct the recipe recommendation system, each ingredient list was condense
 
 ## Deliverable
 Streamlit was used to make a user-interactive [app](https://comfoodable.streamlit.app/)
+The app sometimes needs to wake up before being available again. It might take some time.
 
 
 
