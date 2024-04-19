@@ -67,7 +67,7 @@ six==1.16.0
 sklearn==0.0
 smart-open==5.1.0
 smmap==4.0.0
-streamlit==0.85.0
+streamlit==1.10.0
 terminado==0.10.1
 testpath==0.5.0
 threadpoolctl==2.2.0
